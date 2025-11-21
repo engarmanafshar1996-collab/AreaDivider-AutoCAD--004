@@ -11,17 +11,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Explicitly set CopyLocal to False and use relative path -->
+    <!-- Use a custom environment variable to define the absolute path to the References folder -->
     <Reference Include="AcCoreMgd">
-      <HintPath>..\References\AcCoreMgd.dll</HintPath>
+      <HintPath>$(AUTOCAD_DLL_PATH)\AcCoreMgd.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="AcDbMgd">
-      <HintPath>..\References\AcDbMgd.dll</HintPath>
+      <HintPath>$(AUTOCAD_DLL_PATH)\AcDbMgd.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="AcMgd">
-      <HintPath>..\References\AcMgd.dll</HintPath>
+      <HintPath>$(AUTOCAD_DLL_PATH)\AcMgd.dll</HintPath>
       <Private>False</Private>
     </Reference>
     
