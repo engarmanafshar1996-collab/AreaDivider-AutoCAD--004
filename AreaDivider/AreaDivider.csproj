@@ -11,7 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Use relative path to the References folder in the repository root -->
+    <!-- References to AutoCAD DLLs from the local References folder -->
     <Reference Include="AcCoreMgd">
       <HintPath>..\References\AcCoreMgd.dll</HintPath>
       <Private>False</Private>
@@ -24,6 +24,8 @@
       <HintPath>..\References\AcMgd.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    
+    <!-- Standard .NET Framework References -->
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
