@@ -14,15 +14,15 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    # Setup MSBuild without specifying version (recommended approach)
-    # This will automatically find the latest available MSBuild on the runner
+    # Setup MSBuild - Parameter vs-version removed to find the latest available MSBuild
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v2
 
-    # Restore NuGet packages if needed
+    # Setup NuGet
     - name: Setup NuGet
       uses: nuget/setup-nuget@v1
       
+    # Restore NuGet packages
     - name: Restore NuGet packages
       run: nuget restore AreaDivider/AreaDivider.csproj -PackagesDirectory packages
 
