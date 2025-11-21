@@ -14,6 +14,11 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    # Set environment variable for the absolute path to the References folder
+    - name: Set AutoCAD DLL Path
+      run: echo "AUTOCAD_DLL_PATH=${{ github.workspace }}\References" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8
+      shell: powershell
+
     # Setup MSBuild - Parameter vs-version removed to find the latest available MSBuild
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v2
