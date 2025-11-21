@@ -11,7 +11,10 @@ jobs:
   build:
     runs-on: windows-latest
 
-    # Setup MSBuild - Removed vs-version parameter to find the latest available MSBuild
+    steps:
+    - uses: actions/checkout@v4
+
+    # Setup MSBuild - Parameter vs-version removed to find the latest available MSBuild
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v2
 
