@@ -11,7 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Direct reference to the DLL files uploaded to the References folder in the repository -->
+    <!-- Use relative path to the References folder in the repository root -->
     <Reference Include="AcCoreMgd">
       <HintPath>..\References\AcCoreMgd.dll</HintPath>
       <Private>False</Private>
