@@ -26,9 +26,9 @@ jobs:
     - name: Restore NuGet packages
       run: nuget restore AreaDivider/AreaDivider.csproj -PackagesDirectory packages
 
-    # Build the project
+    # Build the project - TargetFrameworkVersion changed to v4.7.2 for better compatibility
     - name: Build Solution
-      run: msbuild AreaDivider/AreaDivider.csproj /p:Configuration=Release /p:Platform="Any CPU" /p:TargetFrameworkVersion=v4.8
+      run: msbuild AreaDivider/AreaDivider.csproj /p:Configuration=Release /p:Platform="Any CPU" /p:TargetFrameworkVersion=v4.7.2
 
     # Upload the built DLL as artifact
     - name: Upload Artifact
